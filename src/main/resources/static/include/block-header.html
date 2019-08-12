@@ -1,0 +1,123 @@
+<!-- Основний верхній блок -->
+<div id="block-header">
+<!-- Верхній блок з навігацією -->
+<div id="header-top-block">
+<!-- Список с навігацією -->
+<ul id="header-top-menu">
+<!--<li>Ваше місто - <span>Львів</span></li>-->
+<li>Наше місце знаходження - <span><span id="nonup">м.</span>Львів</span></li>
+<li><a href="/pronas">Про нас</a></li>
+<!--<li><a href="magaziny">Магазини</a></li>-->
+<li><a href="/kontakty">Контакти</a></li>
+</ul>
+
+<!-- Вхід та реєстрація -->
+    <div id='reg-auth-title-div' >
+        <p id='reg-auth-title' align='right'><a onclick='authentication()' class='top-auth' id=''>Увійти</a><a href='/registration'>Реєстрація</a></p> <!--<a onclick='authentication()' class='top-auth' id=''>Увійти</a><a href='/registration'>Реєстрація</a>-->
+    </div>
+    <div id='auth-user-info-div' >
+        <p id="auth-user-info" onclick="blockUserShow()" align="right"></p> <!--<img src='/images/user.png' />Вітаємо Вас, <script>localStorage.getItem('auth_name');</script>!<script>localStorage.getItem('auth-user-info');</script>-->
+    </div>
+    <div id="block-top-auth">
+<div class="corner"></div>
+<form>
+<ul id="input-email-pass">
+
+<h3>Вхід в інтернет-магазин</h3>
+
+<p id="message-auth">Невірний Логін та(або) Пароль</p>
+
+<li style="text-align: center"><input type="text" id="auth_login" placeholder="Логін або E-mail" /></li>
+<li style="text-align: center"><input type="password" id="auth_pass" placeholder="Пароль" /><span onclick="passShowHide()" id="button-pass-show-hide" class="pass-show"></span></li>
+
+<ul id="list-auth">
+<li><input type="checkbox" name="rememberme" id="rememberme" /><label for="rememberme">Запам'ятати мене</label></li>
+<li><a id="remindpass" onclick="remindPass()" style="cursor: pointer">Забули пароль?</a></li>
+</ul>
+
+<p id="button-auth" ><a onclick="buttonAuth()">Увійти</a></p>
+
+<p align="right" class="auth-loading"><img src="/images/loading.gif" /></p>
+
+</ul>
+</form>
+
+<div id="block-remind">
+<h3>Відновлення пароля</h3>
+<p id="message-remind" class="message-remind-success" ></p>
+<center><input type="text" id="remind-email" placeholder="Вкажіть Ваш E-mail" /></center>
+<p align="right" id="button-remind" onclick="buttonRemind()" ><a>Нагадати</a></p>
+<p align="right" class="auth-loading" ><img src="/images/loading.gif" /></p>
+<p id="prev-auth" onclick="prevAuth()">Назад</p>
+</div>
+
+
+</div>
+
+</div>
+<!-- Лінія -->
+<div id="top-line"></div>
+
+<div id="block-user" >
+<div class="show-block-user" id="active-button" >
+<div class="corner2"></div>
+    <ul id="block-user-1-a1"><li><a ><img src="images/user_info.png"/></a></li></ul>
+    <ul id="block-user-1-a2"><li><a href="profile">Особисті данні</a></li></ul>
+    <ul id="block-user-1-a3"><li><a ><img src="images/logout.png"/></a></li></ul>
+    <ul id="block-user-1-a4"><li><a  id="logout" onclick="logout()" >Вийти</a></li></ul>
+</div>
+</div>
+
+<!-- Логотип -->
+<div id="img-logo">
+EuroCrab
+</div>
+
+<!-- Інформаційний блок + !-- Форма пошуку-->
+<div id="personal-info">
+<p ><c1><img src="images/phone-icon.png"/></c1></p>
+<p ><c2> +38(099)0036705 </c2></p>
+<p ><c3><img src="images/phone-icon.png"/></c3></p>
+<p ><c4> +38(098)0036705 </c4></p>
+<p ><c5><img src="images/phone-icon.png"/></c5></p>
+<p ><c6> +38(073)0036705 </c6></p>
+<!--<p ><c1><img src="images/phone-icon.png"/></c1></p>-->
+<!--<p ><c2> +38(095)8335625 </c2></p>-->
+<!--<p ><c3><img src="images/time-on-icon.png"/></c3></p>-->
+<!--<p ><c4>Пн-Пт: з 09:00 до 18:00</c4></p>-->
+<!--<p ><c5><img src="images/time-off-icon.png"/></c5></p>-->
+<!--<p ><c6>Сб-Нд: вихідні</c6></p>-->
+<p ><c67><img src="images/logo-crab.png"/></c67></p>
+</div>
+
+<!-- Форма пошуку -->
+<div id="block-search">
+<p ><b><img src="images/icon-search-input.png"/></b></p>
+<form>
+
+<input type="text" id="input-search" name="q" placeholder="        Тисячі товарів з ЄС"/><!--value="<?php echo $search; ?>"/>-->
+    <a style="cursor: pointer" id="button-search" onclick="searchByTitle()">Пошук</a>
+
+</form>
+
+<ul id="result-search">
+
+</ul>
+</div>
+
+</div>
+<div id="nav-line"></div>
+<!-- Середня навігація -->
+<div id="top-menu">
+<!-- Лінія -->
+<ul>
+<li><c7><img src="/images/shop.png" /><a href="/"><c7>Головна</c7></a></c7></li>
+</a><li><c8><img src="/images/new-32.png" /><a style="cursor: pointer;" onclick="showBy('newTovar')">Новинки</a></c8></li>
+<li><c9><img src="/images/bestprice-32.png" /><a style="cursor: pointer;" onclick="showBy('leader')">Популярні</a></c9></li>
+<li><c10><img src="/images/sale-32.png" /><a style="cursor: pointer;" onclick="showBy('sale')">Розпродаж</a></c10></li>
+</ul>
+
+<p id="block-basket"><img src="/images/cart-icon.png" /><a style='cursor: pointer' onclick="loadCart()" >Кошик пустий</a></p>
+</div>
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/trackbar/trackbar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/fancybox/jquery.fancybox.css}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/coins-icon.png}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <!-- при перенесенні в інтернет замінити на charset=utf-8-->
+    <meta name="keywords"
+          content="інтернет, интернет, магазин, єврокомора, еврокомора, кава, кофе, чай, солодощі, сладости, шоколад, сир, сыр, м'ясо, мясо, ковбаса, колбаса, бакалія, бакалея, оливки, олія, масло, Україна, Украина, Київ, Киев, Харків, Харьков, Одеса, Одесса, Дніпро, Днепр, Донецьк, Донецк, Запоріжжя, Запорожье, Львів, Львов, Кривий Ріг, Кривой Рог, Миколаїв, Николаев, Маріуполь Мариуполь"/>
+    <meta name="description"
+          content="Інтернет магазин Eurocomora.com Продукти харчування з країн ЄС. Офіційна гарантія. Доставка по всій Україні."/>
+    <title>EUROCRAB</title>
+    <style>
+        @font-face {
+            font-family: Algerian;
+            src: url(/css/Algerian_Regular.ttf);
+        }
+    </style>
+
+</head>
+<body onpageshow="loading()" onload="loading()">
+<script th:src="@{/js/w3data.js}"></script>
+<div id="block-body">
+    <div w3-include-html="include/block-header.html"></div>
+
+    <div id="block-content-2">
+        <div class="pronasdescription-main">Ви - поціновувач підбадьорливої ароматної кави або благородного аристократичного чаю,
+            звикли до якості продуктів рівня ЄС, чи прагнете відкрити для себе нові смакові горизонти?<br>Значить нам з вами по дорозі!</div>
+        <div><br></div>
+        <div id="pronasdescription">Оптовий магазин Eurocrab.com прагне долучити до дивовижного, чарівного багатства
+            смаків з усього світу все більше українців. Розділіть з нами захопленість цими приголомшливими, чарівними
+            відчуттями, а ми обіцяємо стати вашим кращим провідником в світ продуктів з країн Єропейської спільноти,
+            постачальником якісних натуральних продуктів від кращих світових виробників.</div>
+        <div><br></div>
+        <div class="pronasdescription">Свою місію ми бачимо в тому, щоб популяризувати в нашій країні європейску культуру, привнести в неї світові
+            стандарти споживання. Ми є найзручнішим посередником, що з'єднує сотні відповідальних виконавців з тисячами
+            наших клієнтів, що віддають перевагу вигідному та комфортному онлайн-шопінгу. Купити чай, каву, супутні товари, солодощі та
+            бакалію за оптимальними цінами ви можете на нашому сайті, адже для вашої зручності ми зібрали безліч
+            товарів на одному ресурсі. Високий сервіс, комфортність покупки, вигідність співпраці - ключові три кити, на яких
+            будується робота нашого магазину.</div>
+        <div><br></div>
+        <div class="pronasdescription">Піклуючись про клієнта, Eurocrab.com постійно розширює свій асортимент, доповнюючи його супутніми товарами.
+            Так ми дали покупцеві можливість купити вигідно все на одному інтернет-ресурсі, оплачуючи лише один раз за
+            доставку. Надаючи високий сервіс обслуговування, якісний оригінальний продукт за доступною ціною, наш магазин
+            завоює Ваше визнання та високу оцінку.</div>
+        <div><br></div>
+        <div class="pronasdescription">Якщо ви є справжнім поціновувачем благородного напою або підприємцем, власником кав'ярні або ресторану, то
+            оптові покупки в Eurocrab.com будуть для вас дуже вигідні. Наш інтернет магазин продуктів харчування з ЄС
+            пропонує вам оцінити всі переваги від взаємовигідної співпраці, які включають:
+            <li class="pronasdescription-in">широкий вибір товару з категорій Кава, Чай, Какао напої, Бакалія, Кондитерські вироби , Бакалія, Супутні товари;</li>
+            <li class="pronasdescription-in">високий сервіс обслуговування, кваліфіковані консультації, про що свідчить позитивна репутація за більш ніж 10 років роботи офлайн;</li>
+            <li class="pronasdescription-in">в нашому каталозі тільки оригінальний товар, що має всі необхідні сертифікати якості, продаж бакалії оптом здійснюється під усіма необхідними документами;</li>
+            <li class="pronasdescription-in">мінімальне замовлення становить 500 грн, забрати його можна самостійно у Львові або замовити доставку по Україні зручною вам транспортною компанією;</li>
+            <li class="pronasdescription-in">оплата проводиться одним з трьох можливих способів: готівковий або безготівковий розрахунок, накладений платіж;</li>
+            <li class="pronasdescription-in">гарантії від магазину - при зміні споживчих характеристик продуктів при їх транспортуванні, ми компенсуємо вартість замовлення.</li>
+            Мета всієї нашої діяльності - економія вашого часу і фінансових ресурсів на покупки всього необхідного для
+            особистого користування або успішного ведення бізнесу.</div>
+        <div><br></div>
+        <!--Магазин чаю, кави - пропонований асортимент-->
+        <div class="pronasdescription">Магазином Eurocrab.com проводиться продаж кави оптом в найширшому асортименті, що включає:
+            <li class="pronasdescription-in">натуральні мелені кавові зерна;</li>
+            <li class="pronasdescription-in">кава в зернах різного ступеня обсмаження;</li>
+            <li class="pronasdescription-in">розчинна кава зарубіжних виробників для швидкого приготування ароматного напою.</li>
+            Продаж чаю також охоплює різноманітні сорти цього аристократичного напою і пропонує клієнтам його купити з наступних категорій:
+            <li class="pronasdescription-in">розсипний;</li>
+            <li class="pronasdescription-in">пакетований чай;</li>
+            <li class="pronasdescription-in">швидкорозчинний чайний напій;</li>
+            <li class="pronasdescription-in">презентабельні подарункові чайні упаковки (металізовані банки).</li>
+            Співпрацюючи з перевіреними виробниками, кращими світовими брендами, ми переконані у високій якості товару, що реалізовується.
+            Продаж кондитерських виробів оптом здійснюється в наступних категоріях:
+            <li class="pronasdescription-in">шоколад, шоколадні цукерки;</li>
+            <li class="pronasdescription-in">горіхові, шоколадні пасти;</li>
+            <li class="pronasdescription-in">вафлі, печиво, інші солодощі;</li>
+            <li class="pronasdescription-in">кондитерські шедеври виробництва Туреччини;</li>
+            <li class="pronasdescription-in">льодяники, карамель, драже, жувальні, мармеладні цукерки;</li>
+            <li class="pronasdescription-in">жувальні гумки, вироби з іграшкою;</li>
+            <li class="pronasdescription-in">суміші для приготування десертів, морозива.</li></div>
+        <div><br></div>
+        <div class="pronasdescription">Команда магазину Eurocrab.com прагне зробити всі ваші покупки безпечними. Вся інформація по операціях є конфіденційною,
+            ретельно шифрується нашими програмістами, що використовую передові технології.
+            Ми нікому і ніколи не продаємо нашу клієнтську базу, адже цінуємо та бережемо Вас!
+            <div><br></div>
+            <div class="pronasdescription-main">Eurocrab - магазин вигідних, комфортних, безпечних закупівель!</div>
+        </div>
+    <div w3-include-html="include/block-footer.html"></div>
+
+    <div w3-include-html="include/block-created.html"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/jquery-1.8.2.min.js}"></script>
+<script th:src="@{/js/jquery.cookie.min.js}"></script>
+<script th:src="@{/trackbar/jquery.trackbar.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/twbsPagination.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/block-news.js}"></script>
+<script th:src="@{/js/block-parameter.js}"></script>
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jcarousellite_1.0.1.js}"></script>
+<script th:src="@{/js/shop-script.js}"></script>
+<script th:src="@{/js/jTabs.js}"></script>
+<script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+
+
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>

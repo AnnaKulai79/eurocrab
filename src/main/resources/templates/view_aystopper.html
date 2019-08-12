@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/trackbar/trackbar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/fancybox/jquery.fancybox.css}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/coins-icon.png}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <!-- при перенесенні в інтернет замінити на charset=utf-8-->
+    <meta name="keywords"
+          content="інтернет, интернет, магазин, єврокомора, еврокомора, кава, кофе, чай, солодощі, сладости, шоколад, сир, сыр, м'ясо, мясо, ковбаса, колбаса, бакалія, бакалея, оливки, олія, масло, Україна, Украина, Київ, Киев, Харків, Харьков, Одеса, Одесса, Дніпро, Днепр, Донецьк, Донецк, Запоріжжя, Запорожье, Львів, Львов, Кривий Ріг, Кривой Рог, Миколаїв, Николаев, Маріуполь Мариуполь"/>
+    <meta name="description"
+          content="Інтернет магазин Eurocomora.com Продукти харчування з країн ЄС. Офіційна гарантія. Доставка по всій Україні."/>
+    <title>EUROCRAB</title>
+    <style>
+        @font-face {
+            font-family: Algerian;
+            src: url(/css/Algerian_Regular.ttf);
+        }
+    </style>
+
+</head>
+<body onpageshow="loadingVA()" onload="loadingVA()">
+<script th:src="@{/js/w3data.js}"></script>
+<div id="block-body">
+    <div w3-include-html="include/block-header.html"></div>
+    <div id="block-right">
+        <div w3-include-html="include/block-category.html"></div>
+        <div w3-include-html="include/block-parameter.html"></div>
+        <!--<div w3-include-html="include/block-news.html"></div>-->
+        <div id="block-news">
+            <center><img id="news-prev-top" src="/images/img-prev.png"/><img id="news-next-top"
+                                                                             src="/images/img-next.png"/></center>
+            <div id="newsticker">
+                <ul>
+                    <li style="height: 200px">
+                    </li>
+                </ul>
+            </div>
+            <center><img id="news-prev-bottom" src="/images/img-prev.png"/><img id="news-next-bottom"
+                                                                                src="/images/img-next.png"/></center>
+        </div>
+    </div>
+
+    <div id="block-content">
+        <div id="block-sorting">
+            <p id="nav-breadcrumbs"><a href="">Головна сторінка</a> \ <span>Усі товари</span></p>
+
+            <ul id="options-list">
+
+                <li>вигляд:</li>
+
+                <li><img id="style-grid" src="/images/icon-grid.png"/></li>
+                <li><img id="style-list" src="/images/icon-list.png"/></li>
+
+                <li>сортувати:</li>
+                <li><a id="select-sort">Усі товари</a>
+                        <ul id="sorting-list" class="">
+                            <li><a style="cursor: pointer;" onclick="sortVA('priceASC')">Від дешевих до дорогих</a></li>
+                            <li><a style="cursor: pointer;" onclick="sortVA('priceDESC')">Від дорогих до дешевих</a></li>
+                            <li><a style="cursor: pointer;" onclick="sortVA('byLeader')">Популярне</a></li>
+                            <li><a style="cursor: pointer;" onclick="sortVA('byNew')">Новинки</a></li>
+                            <li><a style="cursor: pointer;" onclick="sortVA('byTitle')">Від А до Я</a></li>
+                            <li><a style="cursor: pointer;" onclick="sortVA('all')">Усі товари</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+        <ul id="block-tovar-grid">
+        </ul>
+        <ul id="block-tovar-list">
+        </ul>
+        <div class="wrapper">
+            <div class="container">
+                <div id="page-content" class="page-content">Сторінка 1</div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul id="pagination-demo" class="pagination-sm"></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div id="block-random-tovar">
+        <ul id="random-tovar">
+        </ul>
+    </div>
+    <div w3-include-html="include/block-footer.html"></div>
+    <!--<script type="text/javascript">(function() {-->
+    <!--if (window.pluso)if (typeof window.pluso.start == "function") return;-->
+    <!--if (window.ifpluso==undefined) { window.ifpluso = 1;-->
+    <!--var d = document, s = d.createElement('script'), g = 'getElementsByTagName';-->
+    <!--s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;-->
+    <!--s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js' ;-->
+    <!--var h=d[g]('body')[0];-->
+    <!--h.appendChild(s);-->
+    <!--}})();-->
+    <!--</script>-->
+
+    <div w3-include-html="include/block-created.html"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/jquery-1.8.2.min.js}"></script>
+<script th:src="@{/js/jquery.cookie.min.js}"></script>
+<script th:src="@{/trackbar/jquery.trackbar.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/twbsPagination.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/block-news.js}"></script>
+<script th:src="@{/js/block-parameter.js}"></script>
+<script th:src="@{/js/view-aystopper.js}"></script>
+<script th:src="@{/js/jcarousellite_1.0.1.js}"></script>
+<script th:src="@{/js/shop-script.js}"></script>
+<!--<script th:src="@{/js/auth.js}"></script>-->
+<script th:src="@{/js/jTabs.js}"></script>
+<script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>

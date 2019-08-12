@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/a_style.css}">
+    <link rel="stylesheet" th:href="@{/css/a_reset.css}">
+    <link rel="stylesheet" th:href="@{/css/jquery_confirm.css}">
+    <link rel="stylesheet" th:href="@{/fancybox/jquery.fancybox.css}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+    <script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+    <title>Панель Управління - Відгуки</title>
+</head>
+<body onpageshow="loadingPage()">
+<script th:src="@{/js/w3data.js}"></script>
+<div id="block-body">
+    <div w3-include-html="/include/a_block-header.html"></div>
+<div id="block-content">
+    <div id="block-parameters">
+    <ul id="options-list">
+        <li>Сортувати</li>
+        <li><a id="select-links" href="#">Сортувати</a>
+            <ul id="list-links-sort">
+                <li><a style="cursor: pointer" onclick="sort(yes)">Перевірені</a></li>
+                <li><a style="cursor: pointer" onclick="sort(no)">Не перевірені</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    <div id="block-info">
+        <ul id="review-info-count">
+            <li id="all-count-result">Усього відгуків - <strong></strong></li><!--<?php echo $all_count_result; ?>-->
+            <li id="no-accept-count-result">Не перевірені - <strong></strong></li><!--<?php echo $no_accept_count_result; ?>-->
+        </ul>
+    </div>
+
+    <!--echo '-->
+    <div class="block-reviews">
+    </div>
+    <!--';-->
+
+    <!--} while ($row = mysql_fetch_array($result));-->
+    <!--}-->
+
+    <!--if ($page != 1) $pervpage = '<li><a class="pstr-prev" href="reviews.php?page='. ($page - 1) .'" />Назад</a></li>';-->
+
+    <!--if ($page != $total) $nextpage = '<li><a class="pstr-next" href="reviews.php?page='. ($page + 1) .'"/>Вперед</a></li>';-->
+
+    <!--// Находим две ближайшие станицы с обоих краев, если они есть-->
+    <!--if($page - 5 > 0) $page5left = '<li><a href="reviews.php?page='. ($page - 5) .'">'. ($page - 5) .'</a></li>';-->
+    <!--if($page - 4 > 0) $page4left = '<li><a href="reviews.php?page='. ($page - 4) .'">'. ($page - 4) .'</a></li>';-->
+    <!--if($page - 3 > 0) $page3left = '<li><a href="reviews.php?page='. ($page - 3) .'">'. ($page - 3) .'</a></li>';-->
+    <!--if($page - 2 > 0) $page2left = '<li><a href="reviews.php?page='. ($page - 2) .'">'. ($page - 2) .'</a></li>';-->
+    <!--if($page - 1 > 0) $page1left = '<li><a href="reviews.php?page='. ($page - 1) .'">'. ($page - 1) .'</a></li>';-->
+
+    <!--if($page + 5 <= $total) $page5right = '<li><a href="reviews.php?page='. ($page + 5) .'">'. ($page + 5) .'</a></li>';-->
+    <!--if($page + 4 <= $total) $page4right = '<li><a href="reviews.php?page='. ($page + 4) .'">'. ($page + 4) .'</a></li>';-->
+    <!--if($page + 3 <= $total) $page3right = '<li><a href="reviews.php?page='. ($page + 3) .'">'. ($page + 3) .'</a></li>';-->
+    <!--if($page + 2 <= $total) $page2right = '<li><a href="reviews.php?page='. ($page + 2) .'">'. ($page + 2) .'</a></li>';-->
+    <!--if($page + 1 <= $total) $page1right = '<li><a href="reviews.php?page='. ($page + 1) .'">'. ($page + 1) .'</a></li>';-->
+
+    <!--if ($page+5 < $total)-->
+    <!--{-->
+    <!--$strtotal = '<li><p class="nav-point">...</p></li><li><a href="reviews.php?page='.$total.'">'.$total.'</a></li>';-->
+    <!--}else-->
+    <!--{-->
+    <!--$strtotal = "";-->
+    <!--}-->
+
+    <!--if ($total > 1)-->
+    <!--{-->
+    <!--echo '-->
+    <!--<center>-->
+        <!--<div class="pstrnav">-->
+            <!--<ul>-->
+                <!--';-->
+                <!--echo $pervpage.$page5left.$page4left.$page3left.$page2left.$page1left."<li><a class='pstr-active' href='reviews.php?page=".$page."'>".$page."</a></li>".$page1right.$page2right.$page3right.$page4right.$page5right.$strtotal.$nextpage;-->
+                <!--echo '-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</center>-->
+    <!--';-->
+    <!--}-->
+
+    <!--?>-->
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/jquery_confirm.js}"></script>
+<script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+<script th:src="@{/js/twbsPagination.js}"></script>
+<script th:src="@{/js/reviews.js}"></script>
+<script th:src="@{/js/script-a.js}"></script>
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>

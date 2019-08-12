@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/trackbar/trackbar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/fancybox/jquery.fancybox.css}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/coins-icon.png}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <!-- при перенесенні в інтернет замінити на charset=utf-8-->
+    <meta name="keywords"
+          content="інтернет, интернет, магазин, єврокомора, еврокомора, кава, кофе, чай, солодощі, сладости, шоколад, сир, сыр, м'ясо, мясо, ковбаса, колбаса, бакалія, бакалея, оливки, олія, масло, Україна, Украина, Київ, Киев, Харків, Харьков, Одеса, Одесса, Дніпро, Днепр, Донецьк, Донецк, Запоріжжя, Запорожье, Львів, Львов, Кривий Ріг, Кривой Рог, Миколаїв, Николаев, Маріуполь Мариуполь"/>
+    <meta name="description"
+          content="Інтернет магазин Eurocomora.com Продукти харчування з країн ЄС. Офіційна гарантія. Доставка по всій Україні."/>
+    <title>EUROCRAB</title>
+    <style>
+        @font-face {
+            font-family: Algerian;
+            src: url(/css/Algerian_Regular.ttf);
+        }
+    </style>
+
+</head>
+<body onpageshow="loading()" onload="loading()">
+<script th:src="@{/js/w3data.js}"></script>
+<div id="block-body">
+    <div w3-include-html="include/block-header.html"></div>
+
+    <div id="block-content-2">
+        <div class="pronasdescription-main">
+            Спосіб оплати:
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="pronasdescription-up">6. оплата товару:
+            <li class="pronasdescription-in">6.1. Ціна товару вказується в гривнях і включає в себе податок на додану
+                вартість у разі, якщо відповідний Продавець застосовує загальну систему оподаткування.</li>
+            <li class="pronasdescription-in">6.1.1. Сума замовлення складається з вартості замовлених товарів.</li>
+            <li class="pronasdescription-in">6.2. Ціна Товару вказується на Сайті. Що стосується неправильного вказівки
+                ціни замовленого Покупцем Товару, Продавець інформує про це Покупця для підтвердження Замовлення по
+                виправленої ціною або анулювання Замовлення. При неможливості зв'язатися з Покупцем дане Замовлення
+                вважається анульованим.</li>
+            <li class="pronasdescription-in">6.3. Ціна Товару на Сайті може бути змінена Продавцем в односторонньому
+                порядку. При цьому ціна на замовлений Покупцем Товар зміні не підлягає.</li>
+            <li class="pronasdescription-in">6.4. Оплата Товару здійснюється Покупцем:</li>
+            <li class="pronasdescription-in">6.4.1. готівковими коштами при одержанні Замовлення в сумі, що відповідає
+                сумі Замовлення, зазначеної на Сайті з урахуванням знижок;</li>
+            <li class="pronasdescription-in">6.4.2. безготівковими коштами з використанням банківських карт при оформленні
+                Замовлення в сумі, що відповідає сумі Замовлення, зазначеної на Сайті з урахуванням знижок.</li>
+            <!--<li class="pronasdescription-in">6.4.2.1. </li>-->
+            <li class="pronasdescription-in">6.5. Eurocrab маює право надавати знижки на Товари та встановлювати програму
+                бонусів. Види знижок, бонусів, порядок і умови нарахування визначаються Продавцем самостійно і вказані на
+                Сайті і можуть бути змінені Продавцем в односторонньому порядку.</li>
+            <li class="pronasdescription-in">6.6. Eurocrab веде статистику оформлених Покупцем замовлень. Eurocrab вправі
+                в односторонньому порядку визначати способи оплати, доступні відповідному Покупцеві, грунтуючись на
+                статистиці дій, скоєних Покупцем у взаєминах з Eurocrab.</li>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="pronasdescription">Команда магазину Eurocrab.com прагне зробити всі ваші покупки безпечними. Вся інформація по операціях є конфіденційною,
+            ретельно шифрується нашими програмістами, що використовую передові технології.
+            Ми нікому і ніколи не продаємо нашу клієнтську базу, адже цінуємо та бережемо Вас!</div>
+            <div><br></div>
+            <div class="pronasdescription-main">Eurocrab - магазин вигідних, комфортних, безпечних закупівель!</div>
+        </div>
+    <div w3-include-html="include/block-footer.html"></div>
+
+    <div w3-include-html="include/block-created.html"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/jquery-1.8.2.min.js}"></script>
+<script th:src="@{/js/jquery.cookie.min.js}"></script>
+<script th:src="@{/trackbar/jquery.trackbar.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/twbsPagination.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/block-news.js}"></script>
+<script th:src="@{/js/block-parameter.js}"></script>
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jcarousellite_1.0.1.js}"></script>
+<script th:src="@{/js/shop-script.js}"></script>
+<script th:src="@{/js/jTabs.js}"></script>
+<script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+
+
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/trackbar/trackbar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/fancybox/jquery.fancybox.css}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/coins-icon.png}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <!-- при перенесенні в інтернет замінити на charset=utf-8-->
+    <meta name="keywords"
+          content="інтернет, интернет, магазин, єврокомора, еврокомора, кава, кофе, чай, солодощі, сладости, шоколад, сир, сыр, м'ясо, мясо, ковбаса, колбаса, бакалія, бакалея, оливки, олія, масло, Україна, Украина, Київ, Киев, Харків, Харьков, Одеса, Одесса, Дніпро, Днепр, Донецьк, Донецк, Запоріжжя, Запорожье, Львів, Львов, Кривий Ріг, Кривой Рог, Миколаїв, Николаев, Маріуполь Мариуполь"/>
+    <meta name="description"
+          content="Інтернет магазин Eurocomora.com Продукти харчування з країн ЄС. Офіційна гарантія. Доставка по всій Україні."/>
+    <title>EUROCRAB</title>
+    <style>
+        @font-face {
+            font-family: Algerian;
+            src: url(/css/Algerian_Regular.ttf);
+        }
+    </style>
+
+</head>
+<body onpageshow="loading()" onload="loading()">
+<script th:src="@{/js/w3data.js}"></script>
+<div id="block-body">
+    <div w3-include-html="include/block-header.html"></div>
+    <div id="block-right">
+        <div w3-include-html="include/block-category.html"></div>
+        <div w3-include-html="include/block-parameter.html"></div>
+        <!--<div w3-include-html="include/block-news.html"></div>-->
+        <div id="block-news">
+            <center><img id="news-prev-top" src="/images/img-prev.png"/><img id="news-next-top"
+                                                                             src="/images/img-next.png"/></center>
+            <div id="newsticker">
+                <ul>
+                    <li style="height: 200px">
+                    </li>
+                </ul>
+            </div>
+            <center><img id="news-prev-bottom" src="/images/img-prev.png"/><img id="news-next-bottom"
+                                                                                src="/images/img-next.png"/></center>
+        </div>
+    </div>
+    <div id="block-content">
+        <h3 class="title-h3">Змінити особисті дані</h3>
+        <h5 id="message-error"></h5>
+        <form id="info-user" autocomplete="off">
+            <ul id="info-profile">
+                <li>
+                    <label for="info_pass">Поточний пароль</label>
+                    <span class="star">*</span>
+                    <input type="password" autocomplete="new-password"
+                           name="info_pass" id="info_pass" value="" onchange="checkPass()" />
+                </li>
+
+                <li>
+                    <label for="info_new_pass">Новий пароль</label>
+                    <span class="star">*</span>
+                    <input type="password" autocomplete="new-password"
+                           name="info_new_pass" id="info_new_pass" value="" onchange="checkInput('info_new_pass')"/>
+                </li>
+
+                <li>
+                    <label for="info_surname">Прізвище</label>
+                    <span class="star" >*</span>
+                    <input type="text" required autocomplete="off"
+                           name="info_surname" id="info_surname" onchange="checkInput('info_surname')"/>
+                </li>
+
+                <li>
+                    <label for="info_name">Ім'я</label>
+                    <span class="star" >*</span>
+                    <input type="text"required autocomplete="off"
+                           name="info_name" id="info_name" onchange="checkInput('info_name')"/>
+                </li>
+
+                <li>
+                    <label for="info_patronymic">По батькові</label>
+                    <span class="star" >*</span>
+                    <input type="text" required autocomplete="off"
+                           name="info_patronymic" id="info_patronymic" onchange="checkInput('info_patronymic')"/>
+                </li>
+                <li>
+                    <label for="info_email">E-mail</label>
+                    <span class="star" >*</span>
+                    <input type="email" autocomplete="off"
+                           name="info_email" id="info_email" onchange="checkInput('info_email')"/>
+                </li>
+
+                <li>
+                    <label for="info_phone">Мобільний телефон</label>
+                    <span class="star" >*</span>
+                    <input type="text" required autocomplete="off"
+                           name="info_phone" id="info_phone" onchange="checkInput('info_phone')"/>
+                </li>
+
+                <li>
+                    <label for="info_address">Адреса доставки</label>
+                    <span class="star" >*</span>
+                    <input type="text" required autocomplete="off"
+                           name="info_address" id="info_address" onchange="checkInput('info_address')" />
+                </li>
+
+            </ul>
+
+            <p align="right" style="margin-top: 50px"><a style="cursor: pointer" id="form_submit" name="save_submit" onclick="saveUpdates()">Зберегти</a></p>
+        </form>
+
+    </div>
+
+    <div id="block-random-tovar">
+        <ul id="random-tovar">
+        </ul>
+    </div>
+    <div w3-include-html="include/block-footer.html"></div>
+    <!--<script type="text/javascript">(function() {-->
+    <!--if (window.pluso)if (typeof window.pluso.start == "function") return;-->
+    <!--if (window.ifpluso==undefined) { window.ifpluso = 1;-->
+    <!--var d = document, s = d.createElement('script'), g = 'getElementsByTagName';-->
+    <!--s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;-->
+    <!--s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js' ;-->
+    <!--var h=d[g]('body')[0];-->
+    <!--h.appendChild(s);-->
+    <!--}})();-->
+    <!--</script>-->
+
+    <div w3-include-html="include/block-created.html"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/jquery-1.8.2.min.js}"></script>
+<script th:src="@{/js/jquery.cookie.min.js}"></script>
+<script th:src="@{/trackbar/jquery.trackbar.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/twbsPagination.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/block-news.js}"></script>
+<script th:src="@{/js/block-parameter.js}"></script>
+<script th:src="@{/js/profile.js}"></script>
+<script th:src="@{/js/jcarousellite_1.0.1.js}"></script>
+<script th:src="@{/js/shop-script.js}"></script>
+<!--<script th:src="@{/js/auth.js}"></script>-->
+<script th:src="@{/js/jTabs.js}"></script>
+<script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $("ul.tabs").jTabs({content: ".tabs_content", animate: true, effect:"fade"});
+        $(".image-modal").fancybox();
+        $(".send-review").fancybox();
+
+    });
+</script>
+
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>

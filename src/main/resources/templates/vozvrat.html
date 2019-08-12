@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/trackbar/trackbar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/fancybox/jquery.fancybox.css}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/coins-icon.png}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <!-- при перенесенні в інтернет замінити на charset=utf-8-->
+    <meta name="keywords"
+          content="інтернет, интернет, магазин, єврокомора, еврокомора, кава, кофе, чай, солодощі, сладости, шоколад, сир, сыр, м'ясо, мясо, ковбаса, колбаса, бакалія, бакалея, оливки, олія, масло, Україна, Украина, Київ, Киев, Харків, Харьков, Одеса, Одесса, Дніпро, Днепр, Донецьк, Донецк, Запоріжжя, Запорожье, Львів, Львов, Кривий Ріг, Кривой Рог, Миколаїв, Николаев, Маріуполь Мариуполь"/>
+    <meta name="description"
+          content="Інтернет магазин Eurocomora.com Продукти харчування з країн ЄС. Офіційна гарантія. Доставка по всій Україні."/>
+    <title>EUROCRAB</title>
+    <style>
+        @font-face {
+            font-family: Algerian;
+            src: url(/css/Algerian_Regular.ttf);
+        }
+    </style>
+
+</head>
+<body onpageshow="loading()" onload="loading()">
+<script th:src="@{/js/w3data.js}"></script>
+<div id="block-body">
+    <div w3-include-html="include/block-header.html"></div>
+
+    <div id="block-content-2">
+        <div class="pronasdescription-main">
+            Повернення товару та грошових коштів:
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="pronasdescription-up">повернення Товару належної якості:
+            <li class="pronasdescription-in">7.2.1. Повернення Товару належної якості можливий у випадку, якщо товар не
+                використовувався, збережено його товарний вид, споживчі властивості, пломби, ярлики, а також збережений
+                розрахунковий документ, виданий Покупцеві разом з проданим товаром.</li>
+            <li class="pronasdescription-in">7.2.2. При відмові Покупця від Товару згідно п.7.2.1. Продавець повертає
+                йому вартість повернутого Товару, протягом 30 днів з дати надходження повернутого Товару на склад Продавця
+                разом з заповненим Покупцем заявою на повернення. Повернення грошових коштів вартості Товару здійснюється
+                виключно особі, зазначеній в замовленні на Товар. У разі, якщо Покупець в замовленні вказав невірні дані,
+                Продавець залишає за собою право відмовити такому Покупцеві в поверненні коштів.</li>
+            <li class="pronasdescription-in">7.2.3. Якщо на момент звернення Покупця аналогічний товар відсутній у продажу у
+                Продавця, Покупець має право відмовитися від виконання цієї Угоди і зажадати повернення сплаченої за вказаний
+                Товар грошової суми. Продавець зобов'язаний повернути сплачену за повернутий товар грошову суму протягом
+                30 днів з дня повернення Товару.</li>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="pronasdescription-up">повернення Товару неналежної якості:
+            <li class="pronasdescription-in">7.3.1. Під товаром неналежної якості мається на увазі товар, який несправний
+                і не може забезпечити виконання своїх функціональних якостей. Отриманий Товар повинен відповідати опису на
+                Сайті. Відмінність елементів дизайну, або оформлення від заявлених в описі на Сайті не є ознакою неналежної
+                якості Товару та / або неможливості використання його за призначенням.</li>
+            <li class="pronasdescription-in">7.3.2. Зовнішній вигляд і комплектність Товару, а також комплектність усього
+                Замовлення повинні бути перевірені Одержувачем в момент доставки Товару.</li>
+            <li class="pronasdescription-in">7.3.3. Після отримання Замовлення претензії до зовнішніх дефектів товару,
+                його кількості, комплектності та товарного вигляду не приймаються.</li>
+            <li class="pronasdescription-in">7.3.4. Якщо Покупцеві був переданий Товар неналежної якості та інше не було
+                заздалегідь обумовлено Продавцем, Покупець має право скористатися положеннями ст. 8 «Права споживача у разі
+                придбання ним товару неналежної якості» Закону України «Про захист прав споживачів».</li>
+            <li class="pronasdescription-in">7.3.5. Вимоги про повернення сплаченої за товар грошової суми підлягають
+                задоволенню протягом 30 днів з дня пред'явлення відповідної вимоги (п. 4 ст. 12 Закону України «Про захист
+                прав споживачів»).</li>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="pronasdescription-up">інше:
+            <li class="pronasdescription-in">7.4. Товар (належного і неналежного якості) може бути повернутий кур'єру Eurocrab
+                під час викупу наступного замовлення, за умови, що річ, яка підлягає поверненню була викуплена не раніше ніж 14
+                днів до поточної дати. Після оформлення повернення, клієнт отримує від кур'єрської Eurocrab служби смс-повідомлення,
+                яке містить в тексті посилання на електронну квитанцію про повернення.</li>
+            <li class="pronasdescription-in">7.5. Повернення грошових коштів здійснюється за допомогою повернення вартості
+                оплаченого Товару поштовим, банківським переказом (через ПриватБанк), а також шляхом перерахування на
+                банківську карту (карта повинна бути емітована на території України; валюта карти - гривня). Спосіб повинен бути
+                зазначений у відповідному полі заяви на повернення Товару. Способи повернення коштів, сплачених за Товар
+                неналежної якості, що реалізується Продавцями, відмінними від Eurocrab, визначається такими Продавцями
+                самостійно і вказуються на відповідних Сторінках Продавців.</li>
+            <li class="pronasdescription-in">7.6. У разі оплати Замовлення способом, зазначеним в п. 6.4.2. Оферти, повернення
+                грошових коштів здійснюється за допомогою повернення вартості оплаченого Товару на банківську карту, за
+                допомогою якої було сплачено Товар.</li>
+            <li class="pronasdescription-in">7.7. Гарантійний термін на Товари та умови зберігання встановлюється
+                виробником і вказується на етикетці або на ярлику. Продавець забезпечує дотримання умов зберігання,
+                та використання товарів протягом гарантійного терміну.</li>
+            <li class="pronasdescription-in">7.8. Продавець не відповідає за недоліки Товару, якщо вони виникли
+                після його передачі Покупцеві внаслідок порушення Покупцем правил користування або зберігання товару,
+                дій третіх осіб, або непереборної сили.</li>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="pronasdescription-main">
+            Eurocrab - магазин вигідних, комфортних, безпечних закупівель!
+        </div>
+    </div>
+    <div w3-include-html="include/block-footer.html"></div>
+
+    <div w3-include-html="include/block-created.html"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/jquery-1.8.2.min.js}"></script>
+<script th:src="@{/js/jquery.cookie.min.js}"></script>
+<script th:src="@{/trackbar/jquery.trackbar.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/twbsPagination.js}"></script>
+<script th:src="@{/js/TextChange.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/block-news.js}"></script>
+<script th:src="@{/js/block-parameter.js}"></script>
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jcarousellite_1.0.1.js}"></script>
+<script th:src="@{/js/shop-script.js}"></script>
+<script th:src="@{/js/jTabs.js}"></script>
+<script th:src="@{/fancybox/jquery.fancybox.js}"></script>
+
+
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>

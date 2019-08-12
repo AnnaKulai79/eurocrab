@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="11111111" />
+
+
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/images/Europe-icon.png" rel="shortcut icon" type="image/x-icon"/>
+    
+    
+    
+	<title>CREATORS</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background: url(images/302025.jpg) no-repeat; 
+        background-attachment: fixed;
+        background-size: cover;
+        line-height: 1.3em;
+        font-size: 16px;
+        font-weight: 600;
+        color: #00F700;
+        animation: 0.5s color infinite;
+    }
+   
+    p{
+        line-height: 0.6em;
+    }
+    .color{
+        color: #fff;
+    }
+
+    #main{
+        display:none;
+        padding: 0 5px;
+    }
+    .letter{
+        opacity: 0;
+    }
+    .visible{
+      -webkit-transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -ms-transition: opacity .2s ease-in-out;
+      -o-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      text-shadow: 2px 2px 2px #000, 0 0 2em #000;
+      opacity: 1;
+    } 
+    </style>
+    
+</head>
+<body>
+    <div id="main">
+        <p>T.E. Lawrence, eponymously of Arabia, but very much an Englishman,favored pinching a burning match between his fingers to put it out.~</p> 
+        <p>When asked by his colleague, William potter, to reveal his trick - how
+        is it he so effectively extinguished the flame without hurting himself whatsoever~</p>
+        <p>- Lawrence just smiled and said, "The trick, potter, 
+        is not minding it hurts."~</p>
+        <p>The fire that danced at the end of that match was a gift from the Titan, prometheus, a gift that he stole from the gods.~</p>
+        <p>When prometheus was caught and pought to justice for his theft, the gods, well, you might say they overreacted a little.~</p>
+        <p>The poor man was tied to a rock as an eagle riped through his belly ~ and ate his liver over and over, day after day, ad infinitum. ~</p>
+        <p>All because he gave us fire, our first true piece of technology:~</p> 
+        <p>Fire.~</p>
+        <p>100,000 BC: Stone tools.~</p>
+        <p>4,000 BC: The wheel.~</p>
+        <p>9th century AD: Gunpowder. Bit of a game-changer, that one.~</p>
+        <p>19th century: Eureka! The light bulb!!~</p>
+        <p>20th century: The automobile, television, nuclear weapons, space craft, Internet.~</p>
+        <p>21st century: Biotech, nanotech, fusion and fission, and M-theory -- and that was just the first decade.~</p>
+        <p>We are now three months into the year of our Lord, 2023.~</p> 
+        <p>At this moment in our civilization, we can create cybernetic individuals who, in just a few short years,~   will be completely indistinguishable from us.~</p> 
+        <p>Which leads to an obvious conclusion:~</p>
+        <p>We are the gods now.~</p>
+        <p>For those of you who know me, you will be aware by now that my ambition is unlimited.~</p>
+        <p>You know that I will settle for nothing short of greatness, or I will die trying.~</p>
+        <p>For those of you who do not yet know me, allow me to introduce myself: ~</p>
+        <p>My name is Peter Weyland. ~</p>
+        <p>And if you'll indulge me,~</p>
+        <p>I'd like to change the world.~</p>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $.fn.writeText = function() {
+        var str = this.text();
+        return this.each(function(){
+            var $this = $(this);
+            str = str.replace(/./g, '<span class="letter">$&</span>');
+            $this.html(str.replace(/~/g, '<br />')); 
+            $this.find('span.letter').each(function(n, elem){
+                setTimeout(function(){ 
+                $(elem).addClass('visible');
+                    }, 30 * n);
+                });
+            });
+        };
+        
+        $('#main').show();
+        $('#main').writeText();
+    });
+</script>
+
+</body>
+</html>
